@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Time Complexity : O(N)
+// Space Complexity : O(N)
 int maxIndexDiff(int arr[], int n)
 {
     int LeftMin[n], RightMax[n];

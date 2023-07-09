@@ -30,6 +30,6 @@ string reverse(string s)
 
 int main()
 {
-    string s =~ "A&x#";
+    string s = "A&x#";
     cout << reverse(s) << endl;
 }

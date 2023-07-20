@@ -2,6 +2,8 @@
 #include <unordered_map>
 using namespace std;
 
+// Time Complexity: O(N).
+// Auxiliary Space: O(Number of distinct characters).
 char nonrepeatingCharacter(string s)
 {
     unordered_map<char, int> frequency;

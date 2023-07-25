@@ -55,7 +55,7 @@ int kthAncestor(Node *root, int k, int node)
     return node;
 }
 
-Node *recursiveFunc(Node *root, int k, int node)
+Node *recursiveFunc(Node *root, int &k, int node)
 {
     if (root == NULL)
     {
@@ -70,7 +70,7 @@ Node *recursiveFunc(Node *root, int k, int node)
     Node *left = recursiveFunc(root->left, k, node);
     Node *right = recursiveFunc(root->right, k, node);
 
-    if (left && !right)
+    if (left != NULL && right == NULL)
     {
         k--;
         if (k == 0)
@@ -79,7 +79,7 @@ Node *recursiveFunc(Node *root, int k, int node)
         }
         return left;
     }
-    if (!left && right)
+    if (left == NULL && right != NULL)
     {
         k--;
         if (k == 0)
